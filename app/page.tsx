@@ -1,3 +1,4 @@
+'use client'
 import React, { useState, useEffect } from 'react'
 import '@fontsource/roboto'
 import {
@@ -5,13 +6,13 @@ import {
   JBrowseLinearGenomeView,
 } from '@jbrowse/react-linear-genome-view'
 
-import assembly from '../utils/assembly'
-import tracks from '../utils/tracks'
-import defaultSession from '../utils/defaultSession'
+import assembly from './assembly'
+import tracks from './tracks'
+import defaultSession from './defaultSession'
 
 type ViewModel = ReturnType<typeof createViewState>
 
-function View() {
+export default function Page() {
   const [viewState, setViewState] = useState<ViewModel>()
   const [patches, setPatches] = useState('')
   const [stateSnapshot, setStateSnapshot] = useState('')
@@ -34,17 +35,17 @@ function View() {
 
   return (
     <>
-      <h1>JBrowse 2 React Linear Genome View Demo (with next.js)</h1>
+      <h1>JBrowse 2 React Linear Genome View Demo (with next13)</h1>
       <JBrowseLinearGenomeView viewState={viewState} />
       <h3>Code</h3>
       <p>
         The code for this app is available at{' '}
         <a
-          href="https://github.com/GMOD/jbrowse-components/tree/main/embedded_demos/jbrowse-react-linear-genome-view-nextjs"
+          href="https://github.com/GMOD/jbrowse-react-linear-genome-view-nextjs-demo"
           target="_blank"
           rel="noreferrer"
         >
-          https://github.com/GMOD/jbrowse-components/tree/main/embedded_demos/jbrowse-react-linear-genome-view-nextjs
+          https://github.com/GMOD/jbrowse-react-linear-genome-view-nextjs-demo
         </a>
         .
       </p>
@@ -101,5 +102,3 @@ function View() {
     </>
   )
 }
-
-export default View
