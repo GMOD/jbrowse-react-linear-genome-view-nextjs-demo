@@ -35,7 +35,7 @@ export default function Page() {
 
   return (
     <>
-      <h1>JBrowse 2 React Linear Genome View Demo (with next13)</h1>
+      <h1>JBrowse 2 React Linear Genome View Demo (with next14)</h1>
       <JBrowseLinearGenomeView viewState={viewState} />
       <h3>Code</h3>
       <p>

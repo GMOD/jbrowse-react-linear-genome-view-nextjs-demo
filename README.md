@@ -1,6 +1,6 @@
 # jbrowse-react-linear-genome-view-nextjs
 
-This is a demo of using the linear genome view with next13 with the app router.
+This is a demo of using the linear genome view with next14 with the app router.
 
 ## Demo of `@jbrowse/react-linear-genome-view` with next.js
 
