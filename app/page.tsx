@@ -1,5 +1,6 @@
 'use client'
 import React, { useState, useEffect } from 'react'
+import { createRoot, hydrateRoot } from 'react-dom/client'
 import '@fontsource/roboto'
 import {
   createViewState,
@@ -8,6 +9,8 @@ import {
 
 import assembly from './assembly'
 import tracks from './tracks'
+
+import makeWorkerInstance from '@jbrowse/react-linear-genome-view/esm/makeWorkerInstance'
 import defaultSession from './defaultSession'
 
 type ViewModel = ReturnType<typeof createViewState>
@@ -25,6 +28,15 @@ export default function Page() {
         setPatches(previous => previous + JSON.stringify(patch) + '\n')
       },
       defaultSession,
+      configuration: {
+        rpc: {
+          defaultDriver: 'WebWorkerRpcDriver',
+        },
+      },
+      makeWorkerInstance,
+
+      hydrateFn: hydrateRoot,
+      createRootFn: createRoot,
     })
     setViewState(state)
   }, [])
