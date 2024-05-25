@@ -9,8 +9,6 @@ import {
 
 import assembly from './assembly'
 import tracks from './tracks'
-
-import makeWorkerInstance from '@jbrowse/react-linear-genome-view/esm/makeWorkerInstance'
 import defaultSession from './defaultSession'
 
 type ViewModel = ReturnType<typeof createViewState>
@@ -33,7 +31,9 @@ export default function Page() {
           defaultDriver: 'WebWorkerRpcDriver',
         },
       },
-      makeWorkerInstance,
+      makeWorkerInstance: () => {
+        return new Worker(new URL('./rpcWorker', import.meta.url))
+      },
 
       hydrateFn: hydrateRoot,
       createRootFn: createRoot,
