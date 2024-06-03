@@ -14,7 +14,6 @@ class MyPlugin {
   }
   configure() { }
 }
-// eslint-disable-next-line @typescript-eslint/no-floating-promises
 initializeWorker([...corePlugins, MyPlugin], {
   fetchESM: url => import(/* webpackIgnore:true */ url),
 });
