@@ -14,15 +14,15 @@
   },
   "dependencies": {
     "@fontsource/roboto": "^5.0.5",
-    "@jbrowse/react-linear-genome-view": "^2.6.2",
+    "@jbrowse/react-linear-genome-view": "^3.0.0",
     "@types/node": "^20.4.2",
-    "@types/react": "^18.2.15",
-    "@types/react-dom": "^18.2.7",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
     "eslint": "^8.45.0",
     "eslint-config-next": "^15.0.0",
     "next": "^15.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "typescript": "^5.1.6"
   }
 }

@@ -1,6 +1,5 @@
 'use client'
 import React, { useState, useEffect } from 'react'
-import { createRoot, hydrateRoot } from 'react-dom/client'
 import '@fontsource/roboto'
 import {
   createViewState,
@@ -34,9 +33,6 @@ export default function Page() {
       makeWorkerInstance: () => {
         return new Worker(new URL('./rpcWorker', import.meta.url))
       },
-
-      hydrateFn: hydrateRoot,
-      createRootFn: createRoot,
     })
     setViewState(state)
   }, [])
