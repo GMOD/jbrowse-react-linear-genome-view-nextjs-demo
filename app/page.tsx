@@ -21,14 +21,6 @@ export default function Page() {
       onChange: (patch: any) => {
         setPatches(previous => previous + JSON.stringify(patch) + '\n')
       },
-      configuration: {
-        rpc: {
-          defaultDriver: 'WebWorkerRpcDriver',
-        },
-      },
-      makeWorkerInstance: () => {
-        return new Worker(new URL('./rpcWorker', import.meta.url))
-      },
     })
     setViewState(state)
   }, [])
